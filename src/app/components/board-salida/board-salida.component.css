@@ -1,0 +1,34 @@
+#board {
+  height: 400px;
+  width: 400px;
+  background: black;
+  border: 8px solid black;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+}
+
+
+.tile-card {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background: lightgrey;
+  background: linear-gradient(145deg, #ff6b6b, #d43636);
+  box-shadow: 2px 3px 3px #ba2f2f,
+    2px 3px 3px #ff4949;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 50px;
+  transition: 0.2s;
+}
+
+.tile-card:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 3px 3px #ba2f2f,
+    2px 3px 3px #ff4949;
+}

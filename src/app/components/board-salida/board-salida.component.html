@@ -1,0 +1,13 @@
+<div id="board">
+  <label class="tile-card"
+         *ngFor="let tile of tiles"
+         draggable="true"
+         (dragstart)="dragStart(tile)"
+         (dragover)="dragOver($event)"
+         (dragenter)="dragEnter($event)"
+         (dragleave)="dragLave()"
+         (drop)="drop(tile)"
+         (dragend)="dragEnd()">
+    <h3>{{tile}}</h3>
+  </label>
+</div>

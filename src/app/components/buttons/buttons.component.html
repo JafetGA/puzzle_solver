@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="nodoInicio">
+    <h2>Nodo Inicial</h2>
+    <app-board [array]="matrix"></app-board>
+  </div>
+  <div class="nodoFinal">
+    <h2>Nodo Final</h2>
+    <app-board-salida [array]="orderedMatrix"></app-board-salida>
+  </div>
+</div>
+<div class="botones">
+  <button class="comic-button" (click)="solve()">Resolver</button>
+</div>
+
+
