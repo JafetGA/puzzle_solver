@@ -43,9 +43,12 @@ export class SolutionComponent implements OnInit {
   }
 
   startSolution() {
-    let g = 0.75;    // Valor de g (distancia real) que aumentará en una razón de 0.75 por cada nivel en el árbol
-    let h = this.calcularH(this.startNode, this.endNode);   // Valor de h (distancia estimada) que se calculará con la función 'calcularH'
-    let f = g + h;    // Valor de f (suma de g y h) que se calculará con los valores de g y h
+    // Valor de g (distancia real) que aumentará en una razón de 1 por cada nivel en el árbol
+    let g = 1;
+    // Valor de h (distancia estimada) que se calculará con la función 'calcularH'
+    let h = this.calcularH(this.startNode, this.endNode);
+    // Valor de f (suma de g y h) que se calculará con los valores de g y h
+    let f = g + h;
 
 
     // Para almacenar los valores f,g y h de cada nodo, se usarán arrays de la forma [nodo, f, g, h]
@@ -54,6 +57,7 @@ export class SolutionComponent implements OnInit {
 
     // Para almacenar los pasos de la solución, se usará un array de arrays de la forma [nodo]
     let pasos: string[][][] = [];
+
 
 
     // Mientras la agenda no esté vacía
@@ -72,7 +76,7 @@ export class SolutionComponent implements OnInit {
 
       // Asignar f, g y h a los nuevos nodos y agregarlos a la agenda
       for (const hijo of hijos) {
-        g = this.mejorPuntaje(agenda)[2] + 0.75; // Incrementar el valor de g en 2
+        g = this.mejorPuntaje(agenda)[2] + 1; // Incrementar el valor de g en 1
         h = this.calcularH(hijo, this.endNode);
         f = g + h;
         agenda.push([hijo, f, g, h]);
