@@ -32,7 +32,7 @@ body {
   justify-content: center;
   font-family: "Arial Rounded MT Bold", sans-serif;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 10px;
+  font-size: 12px;
   transition: 0.2s;
 }
 
@@ -49,5 +49,12 @@ body {
   align-items: center;
 }
 
+#solution_title{
+  color: white;
+  margin: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 
 

@@ -34,15 +34,22 @@ export class ButtonsComponent implements OnInit {
     return matrix;
   }
 
+  // Función que se disparará al llamar a la solución
   solve() {
-    
+
     this.passInfoService.setStartMatrix((this.arrayToMatrix([...this.matrix])));
     this.passInfoService.setEndMatrix((this.arrayToMatrix([...this.orderedMatrix])));
-    //call getMatrix() from solution.component.ts
+    //Llamar a la función getMatrix() de solution.component.ts
     const solutionComponent = new SolutionComponent(this.passInfoService);
     solutionComponent.getMatrix();
+
+    //Llamar a la función startSolution() de solution.component.ts
     solutionComponent.startSolution();
+
+    //Llamar a la función createE() de solution.component.ts
     solutionComponent.dropE();
+
+    // Llamar a la función createE() de solution.component.ts
     solutionComponent.createE();
   }
 
